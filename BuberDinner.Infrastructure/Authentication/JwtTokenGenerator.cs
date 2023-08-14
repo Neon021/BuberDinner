@@ -40,7 +40,7 @@ namespace BuberDinner.Infrastructure.Authentication
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
-            var securityToken = new JwtSecurityToken(
+            JwtSecurityToken securityToken = new(
                 issuer: _jwtSettings.Issuer,
                 audience: _jwtSettings.Audience,
                 expires: _dateTimeProvider.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes),

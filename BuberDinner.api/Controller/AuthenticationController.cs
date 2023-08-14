@@ -2,7 +2,7 @@
 using BuberDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BuberDinner.Application.Controller
+namespace BuberDinner.api.Controller
 {
     [ApiController]
     [Route("auth")]
