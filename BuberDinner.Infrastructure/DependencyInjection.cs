@@ -16,7 +16,7 @@ namespace BuberDinner.Infrastructure
             ConfigurationManager configuration)
         {
             services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
-            
+
             services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 

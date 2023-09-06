@@ -3,14 +3,9 @@ using BuberDinner.Application.Common.Interfaces.Services;
 using BuberDinner.Domain.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Reflection.Metadata;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BuberDinner.Infrastructure.Authentication
 {
@@ -31,7 +26,7 @@ namespace BuberDinner.Infrastructure.Authentication
                 new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
                 SecurityAlgorithms.HmacSha256);
-            
+
             Claim[] claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),

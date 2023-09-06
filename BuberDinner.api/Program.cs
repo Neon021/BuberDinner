@@ -1,7 +1,4 @@
-﻿using BuberDinner.api;
-using BuberDinner.api.Filters;
-using BuberDinner.api.Middleware;
-using BuberDinner.Application;
+﻿using BuberDinner.Application;
 using BuberDinner.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 

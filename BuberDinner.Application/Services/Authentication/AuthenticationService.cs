@@ -45,13 +45,13 @@ namespace BuberDinner.Application.Services.Authentication
         public AuthenticationResult Login(string email, string password)
         {
             //1. Validate the user exists
-            if(_userRepository.GetUserByEmail(email) is not User user)
+            if (_userRepository.GetUserByEmail(email) is not User user)
             {
                 throw new Exception("User with given email doesn't exist");
             }
 
             //2. Validate the password
-            if(user.Password != password)
+            if (user.Password != password)
             {
                 throw new Exception("Invalid password");
             }
