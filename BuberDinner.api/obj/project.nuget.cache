@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MeBSJXpF8/WDXxqp8lDW3QJPbK7OMgnEa17DBeKlpON85BUWzOKvDIJeMSlTYWsDc3AE6uNyPxjvz48y5qa1xg==",
+  "dgSpecHash": "cdk6U/1wZih6QCC+lJ8zDC3Q3SxtUunYLTjv7v9Aq2RWrOj5CJRZmQyDrXTshf6fpwyAeAiYzinq7UJFwVJ0uw==",
   "success": true,
   "projectFilePath": "C:\\Users\\bilal\\source\\repos\\BuberDinner\\BuberDinner.api\\BuberDinner.api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bilal\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\bilal\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\bilal\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\bilal\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\bilal\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\bilal\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

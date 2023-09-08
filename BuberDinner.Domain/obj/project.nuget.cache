@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "y9zZdtgvFBLGdKAir/I98383QDZxccJjA/p2tnvZ5b5Yv0F/2kt3H+NeZuqYDGs4AL2sTMTFFn6P2t3spmecTQ==",
+  "dgSpecHash": "xIknEm8z1GM4rt4WMNIV10SmNfLAeQy3Rfi3VWkbzwh0W/s1yxzAtSxFytzG+cTC2KNFKpo1AIqCpHnppJHE+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\bilal\\source\\repos\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\bilal\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
+  ],
   "logs": []
 }

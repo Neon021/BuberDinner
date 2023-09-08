@@ -1,7 +1,9 @@
-﻿namespace BuberDinner.Application.Services.Authentication.Query
+﻿using ErrorOr;
+
+namespace BuberDinner.Application.Services.Authentication.Query
 {
     public interface IAuthenticationQueryService
     {
-        AuthenticationResult Login(string email, string password);
+        ErrorOr<AuthenticationResult> Login(string email, string password);
     }
 }
