@@ -42,3 +42,6 @@ C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\Newtons
 C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\ErrorOr.dll
 C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\MediatR.dll
 C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\MediatR.Contracts.dll
+C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\Mapster.dll
+C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\Mapster.Core.dll
+C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\Mapster.DependencyInjection.dll
