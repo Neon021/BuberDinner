@@ -40,3 +40,5 @@ C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\Microso
 C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\ErrorOr.dll
+C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\MediatR.dll
+C:\Users\bilal\source\repos\BuberDinner\BuberDinner.api\bin\Debug\net7.0\MediatR.Contracts.dll
