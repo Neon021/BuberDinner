@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 namespace BuberDinner.api.Controller
 {
     [ApiController]
-    [Authorize]
+
     public class ApiController : ControllerBase
     {
         protected IActionResult Problem(List<Error> errors)

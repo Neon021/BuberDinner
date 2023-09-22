@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.api.Controller
 {
@@ -6,6 +7,7 @@ namespace BuberDinner.api.Controller
     public class DinnersController : ApiController
     {
         [HttpGet]
+        [Authorize]
         public IActionResult ListDinners()
         {
             return Ok(Array.Empty<string>());
