@@ -1,13 +1,13 @@
-﻿using ErrorOr;
+using ErrorOr;
 
-namespace BuberDinner.Domain.Common.Errors
+namespace BuberDinner.Domain.Common.Errors;
+
+public static partial class Errors
 {
-    public static partial class Errors
+    public static class Authentication
     {
-        public static class Authentication
-        {
-            public static Error InvalidCredentials => Error.Validation(code: "Auth.InvalidCredentials",
-                                                                 description: "Invalid credentials");
-        }
+        public static Error InvalidCredentials => Error.Validation(
+            code: "Auth.InvalidCred",
+            description: "Invalid credentials.");
     }
 }

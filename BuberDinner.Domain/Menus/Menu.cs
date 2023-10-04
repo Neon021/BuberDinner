@@ -1,10 +1,11 @@
-﻿using BuberDinner.Domain.Common.Models;
+using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Common.ValueObjects;
 using BuberDinner.Domain.Dinners.ValueObjects;
 using BuberDinner.Domain.Hosts.ValueObjects;
 using BuberDinner.Domain.Menus.Entites;
 using BuberDinner.Domain.Menus.ValueObjects;
 using BuberDinner.Domain.MenuReview.ValueObjects;
+using BuberDinner.Domain.Menus.Events;
 
 namespace BuberDinner.Domain.Menus;
 
@@ -55,6 +56,8 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
             description,
             AverageRating.CreateNew(0),
             sections ?? new());
+
+        menu.AddDomainEvent(new MenuCreated(menu));
 
         return menu;
     }

@@ -1,58 +1,40 @@
-﻿using System.Reflection.Metadata.Ecma335;
+namespace BuberDinner.Domain.Common.Models;
 
-namespace BuberDinner.Domain.Common.Models
+public abstract class ValueObject : IEquatable<ValueObject>
 {
-    public abstract class ValueObject : IEquatable<ValueObject>
+    public abstract IEnumerable<object> GetEqualityComponents();
+
+    public override bool Equals(object? obj)
     {
-        public abstract IEnumerable<object> GetEqualityComponents();
-        public override bool Equals(object? obj)
+        if (obj is null || obj.GetType() != GetType())
         {
-            if (obj is null || obj.GetType() != GetType())
-            {
-                return false;
-            }
-            ValueObject valueObject = (ValueObject)obj;
-
-            return GetEqualityComponents().SequenceEqual(valueObject.GetEqualityComponents());
+            return false;
         }
 
-        public static bool operator ==(ValueObject left, ValueObject right)
-        {
-            return Equals(left, right);
-        }
-        public static bool operator !=(ValueObject left, ValueObject right)
-        {
-            return !Equals(left, right);
-        }
-
-        public override int GetHashCode()
-        {
-            return GetEqualityComponents()
-                .Select(x => x?.GetHashCode() ?? 0)
-                .Aggregate((x, y) => x ^ y);
-        }
-
-        public bool Equals(ValueObject? other)
-        {
-            return Equals((object?)other);
-        }
+        var valueObject = (ValueObject)obj;
+        return GetEqualityComponents()
+                .SequenceEqual(valueObject.GetEqualityComponents());
     }
 
-    public class Price : ValueObject
+    public static bool operator ==(ValueObject left, ValueObject right)
     {
-        public decimal Amount { get; private set; }
-        public string Currency { get; private set; }
+        return Equals(left, right);
+    }
 
-        public Price(string currency, decimal amount)
-        {
-            Currency = currency;
-            Amount = amount;
-        }
+    public static bool operator !=(ValueObject left, ValueObject right)
+    {
+        return !Equals(left, right);
+    }
 
-        public override IEnumerable<object> GetEqualityComponents()
-        {
-            yield return Amount;
-            yield return Currency;
-        }
+    public override int GetHashCode()
+    {
+        return GetEqualityComponents()
+                .Select(x => x?.GetHashCode() ?? 0)
+                .Aggregate((x, y) => x ^ y);
+    }
+
+    public bool Equals(ValueObject? other)
+    {
+        return Equals((object?)other);
     }
 }

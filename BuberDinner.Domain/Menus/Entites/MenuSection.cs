@@ -1,4 +1,4 @@
-﻿using BuberDinner.Domain.Common.Models;
+using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Menus.ValueObjects;
 
 namespace BuberDinner.Domain.Menus.Entites;
@@ -24,7 +24,7 @@ public sealed class MenuSection : Entity<MenuSectionId>
         return new(MenuSectionId.CreateUnique(), name, description, items);
     }
 
-//#pragma warning disable CS8618
-//    private MenuSection() { }
-//#pragma warning restore CS8618
+#pragma warning disable CS8618
+    private MenuSection() { }
+#pragma warning restore CS8618
 }

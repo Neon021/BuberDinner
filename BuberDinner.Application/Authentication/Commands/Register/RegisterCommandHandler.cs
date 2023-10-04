@@ -1,10 +1,10 @@
-﻿using BuberDinner.Application.Common.Interfaces.Authentication;
+﻿using BuberDinner.Application.Authentication.Common;
+using BuberDinner.Application.Common.Interfaces.Authentication;
 using BuberDinner.Application.Common.Interfaces.Persistence;
-using BuberDinner.Domain.Entities;
 using BuberDinner.Domain.Common.Errors;
+using BuberDinner.Domain.Users;
 using ErrorOr;
 using MediatR;
-using BuberDinner.Application.Authentication.Common;
 
 namespace BuberDinner.Application.Authentication.Commands.Register
 {
@@ -22,19 +22,17 @@ namespace BuberDinner.Application.Authentication.Commands.Register
         public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
         {
             //1. Validate the user doesn't exist
-            if (_userRepository.GetUserByEmail(command.Email) != null)
+            if (_userRepository.GetUserByEmail(command.Email) is not null)
             {
                 return Errors.User.DuplicateEmail;
             }
 
             //2. Create user (generate unique ID) & Persist to DB
-            User user = new()
-            {
-                FirstName = command.FirstName,
-                LastName = command.LastName,
-                Email = command.Email,
-                Password = command.Password
-            };
+            User user = User.Create(
+            command.FirstName,
+            command.LastName,
+            command.Email,
+            command.Password);
 
             _userRepository.Add(user);
 

@@ -1,9 +1,9 @@
-﻿using BuberDinner.Domain.Common.Models;
+using BuberDinner.Domain.Bills.ValueObjects;
+using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Dinners.Entities;
 using BuberDinner.Domain.Dinners.ValueObjects;
 using BuberDinner.Domain.Hosts.ValueObjects;
 using BuberDinner.Domain.Menus.ValueObjects;
-using Price = BuberDinner.Domain.Common.Models.Price;
 
 namespace BuberDinner.Domain.Dinners;
 

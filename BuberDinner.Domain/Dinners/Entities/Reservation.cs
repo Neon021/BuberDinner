@@ -1,4 +1,4 @@
-﻿using BuberDinner.Domain.Bills.ValueObjects;
+using BuberDinner.Domain.Bills.ValueObjects;
 using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Dinners.ValueObjects;
 using BuberDinner.Domain.Guests.ValueObjects;
@@ -49,7 +49,7 @@ public sealed class Reservation : Entity<ReservationId>
             DateTime.UtcNow);
     }
 
-//#pragma warning disable CS8618
-//    private Reservation() { }
-//#pragma warning restore CS8618
+#pragma warning disable CS8618
+    private Reservation() { }
+#pragma warning restore CS8618
 }
