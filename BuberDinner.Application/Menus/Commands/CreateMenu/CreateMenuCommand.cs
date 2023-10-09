@@ -1,4 +1,4 @@
-﻿using BuberDinner.Domain.Menus;
+using BuberDinner.Domain.Menus;
 using ErrorOr;
 using MediatR;
 

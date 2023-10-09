@@ -1,4 +1,4 @@
-﻿using BuberDinner.Application.Common.Interfaces.Persistence;
+using BuberDinner.Application.Common.Interfaces.Persistance;
 using BuberDinner.Domain.Hosts.ValueObjects;
 using BuberDinner.Domain.Menus;
 using BuberDinner.Domain.Menus.Entites;
@@ -10,7 +10,7 @@ namespace BuberDinner.Application.Menus.Commands.CreateMenu;
 public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, ErrorOr<Menu>>
 {
     private readonly IMenuRepository _menuRepository;
-     
+
     public CreateMenuCommandHandler(IMenuRepository menuRepository)
     {
         _menuRepository = menuRepository;
@@ -20,7 +20,7 @@ public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, Error
     {
         await Task.CompletedTask;
 
-        Menu menu = Menu.Create(
+        var menu = Menu.Create(
             hostId: HostId.Create(request.HostId),
             name: request.Name,
             description: request.Description,

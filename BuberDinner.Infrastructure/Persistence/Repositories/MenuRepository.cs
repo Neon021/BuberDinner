@@ -1,4 +1,4 @@
-using BuberDinner.Application.Common.Interfaces.Persistence;
+using BuberDinner.Application.Common.Interfaces.Persistance;
 using BuberDinner.Domain.Menus;
 
 namespace BuberDinner.Infrastructure.Persistence.Repositories;

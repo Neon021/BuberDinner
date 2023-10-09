@@ -1,4 +1,3 @@
-﻿
 using BuberDinner.Domain.Users;
 
 namespace BuberDinner.Application.Authentication.Common;

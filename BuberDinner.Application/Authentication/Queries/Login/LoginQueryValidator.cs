@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 
 namespace BuberDinner.Application.Authentication.Queries.Login;
 

@@ -49,7 +49,7 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
         string description,
         List<MenuSection>? sections = null)
     {
-        var menu = new Menu(
+        Menu menu = new(
             MenuId.CreateUnique(),
             hostId,
             name,

@@ -1,5 +1,6 @@
 using System.Text;
 using BuberDinner.Application.Common.Interfaces.Authentication;
+using BuberDinner.Application.Common.Interfaces.Persistance;
 using BuberDinner.Application.Common.Interfaces.Persistence;
 using BuberDinner.Application.Common.Interfaces.Services;
 using BuberDinner.Infrastructure.Authentication;
@@ -34,7 +35,8 @@ public static class DependencyInjectionRegister
     public static IServiceCollection AddPersistance(this IServiceCollection services)
     {
         services.AddDbContext<BuberDinnerDbContext>(options =>
-            options.UseSqlServer("Server=sql-data;Database=BuberDinner;User Id=sa;Password=amiko123!;TrustServerCertificate=True"));
+            options.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=admin;Database=BuberDinner"));
+            //.UseSqlServer("Server=sql-data;Database=BuberDinner;User Id=sa;Password=amiko123!;TrustServerCertificate=True"));
 
         services.AddScoped<PublishDomainEventsInterceptor>();
         services.AddScoped<IUserRepository, UserRepository>();
@@ -47,7 +49,7 @@ public static class DependencyInjectionRegister
         this IServiceCollection services,
         IConfiguration configration)
     {
-        var jwtSettings = new JwtSettings();
+        JwtSettings jwtSettings = new();
         configration.Bind(JwtSettings.SectionName, jwtSettings);
 
         services.AddSingleton(Options.Create(jwtSettings));

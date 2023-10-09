@@ -1,25 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\BuberDinner.Domain\BuberDinner.Domain.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <ProjectReference Include="..\BuberDinner.Domain\BuberDinner.Domain.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Mediatr" Version="12.1.1" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <PackageReference Include="FluentValidation" Version="11.7.1" />
-	  <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-	  <PackageReference Include="MediatR" Version="12.1.1" />
-
-	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Common\Behaviors\" />
-	</ItemGroup>
-	
 </Project>
