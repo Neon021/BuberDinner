@@ -13,7 +13,7 @@ public class MenuMappingConfig : IRegister
 {
     public void Register(TypeAdapterConfig config)
     {
-        config.NewConfig<(CreateMenuRequest Request, HostId HostId), CreateMenuCommand>()
+        config.NewConfig<(CreateMenuRequest Request, HostId  HostId), CreateMenuCommand>()
             .Map(dest => dest.HostId, src => src.HostId)
             .Map(dest => dest, src => src.Request);
 
