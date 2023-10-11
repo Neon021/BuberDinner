@@ -9,13 +9,13 @@ public record CreateMenuCommand(
     HostId HostId,
     string Name,
     string Description,
-    List<MenuSectionCommand> Sections) : IRequest<ErrorOr<Menu>>;
+    List<CreateMenuSectionCommand> Sections) : IRequest<ErrorOr<Menu>>;
 
-public record MenuSectionCommand(
+public record CreateMenuSectionCommand(
     string Name,
     string Description,
-    List<MenuItemCommand> Items);
+    List<CreateMenuItemCommand> Items);
 
-public record MenuItemCommand(
+public record CreateMenuItemCommand(
     string Name,
     string Description);
